@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+/* offsets internal link position to account for navbar */
+a.anchor {
+  display: block;
+  position: relative;
+  /* height of nav + (section/margin-top /2) :*/
+  top: -4.5rem;
+  visibility: hidden;
+}
+
+/* ---------- navbar * ---------- */
+nav {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  top: 0;
+  position: fixed;
+  height: 2.5rem;
+  width: 100%;
+  background-color: #e8390c;
+  transition-duration: 0.2s;
+}
+nav .nav-toggle {
+  display: none;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  list-style-type: none;
+  text-decoration: none;
+}
+nav ul #brand {
+  position: relative;
+}
+nav ul li {
+  font-size: 1.5rem;
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+nav ul .nav-link {
+  text-decoration: none;
+  color: white;
+}
+nav ul .letter {
+  font-size: 2rem;
+  margin-left: -4rem;
+  transition: color 0.2s ease, margin 0.8s ease;
+}
+nav ul .letter-scroll {
+  display: inline-block;
+  transform: rotate(360deg);
+  margin-right: 9px;
+  margin-left: 0px;
+  color: white;
+  transition: 0.5s;
+}
+
+.nav-scroll {
+  opacity: 1;
+  visibility: visible;
+  background-color: #ff5900;
+  border-bottom: 2px solid #e8790c;
+  transition-duration: 0.4s;
+}
+
+/* ---------- banner ---------- */
+.banner {
+  display: flex;
+  /* text-align: center; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../assets/sunrise-clouds2.jpg");
+  background-size: cover;
+  padding: 2%;
+}
+.banner .banner-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  color: white;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.banner .banner-content::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 20%;
+  /* border: 5px solid red; */
+}
+.banner .banner-content .banner-intro {
+  opacity: 90%;
+  align-self: center;
+  margin-left: auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+.banner .banner-content .banner-intro #banner-intro1 {
+  letter-spacing: 0.8rem;
+  font-size: 1em;
+  animation-delay: 0.2s;
+}
+.banner .banner-content .banner-intro #banner-intro2 {
+  letter-spacing: 0.3rem;
+  font-size: 0.6em;
+  margin-bottom: 3rem;
+  animation-delay: 0.4s;
+}
+.banner .banner-content .banner-intro #banner-intro3 {
+  opacity: 0;
+  animation-delay: 0.7s;
+}
+.banner .banner-content .banner-clock {
+  opacity: 70%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  opacity: 70%;
+}
+.banner .banner-content .banner-clock #banner-timeofday {
+  letter-spacing: 0.2em;
+  font-size: 0.5em;
+}
+.banner .banner-content .banner-clock #clock {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 0.5rem;
+}
+.banner .banner-content .fa {
+  padding: 4rem;
+  color: #ffa40d;
+  transition: 0.3s;
+}
+.banner .banner-content .fa:hover {
+  transform: scale(1.4) translateY(0.8rem);
+}
+.banner .text-roll {
+  transform: rotateX(-90deg);
+  transform-origin: 0 2rem -2rem;
+  transform-style: preserve-3d;
+  /* perspective: 1000px; */
+  /* origin need to be moved if line height/fontsize is changed */
+  line-height: 1;
+  animation: text-in 1s ease 1;
+  animation-fill-mode: forwards;
+}
+@keyframes text-in {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+.banner .text-slide {
+  transform: translateX(-300px);
+  animation: text-slide 0.5s ease 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+}
+@keyframes text-slide {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* ---------- main content ---------- */
+main {
+  padding: 0 10%;
+  height: auto;
+}
+
+section {
+  position: relative;
+  margin-top: 4rem;
+  min-height: 80vh;
+  opacity: 80%;
+  background-color: #fdc975;
+}
+section h1 {
+  color: white;
+  font-size: 5rem;
+}
+section p {
+  margin-bottom: 1rem;
+  line-height: 150%;
+}
+section:last-child {
+  margin-bottom: 90px;
+}
+
+#about h1 {
+  color: white;
+}
+#about p {
+  color: black;
+}
+
+/* ---------- footer */
+.footer {
+  padding: 1rem;
+  color: white;
+  background-color: #ff5900;
+  position: absolute;
+  margin-bottom: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 1023px) {
+  html {
+    font-size: 16px;
+  }
+
+  .banner .banner-content {
+    justify-content: center;
+  }
+  .banner .banner-content .banner-intro {
+    margin-left: 0;
+  }
+  .banner .banner-content .banner-clock {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 14px;
+  }
+
+  nav {
+    height: 4rem;
+    position: fixed;
+  }
+  nav .nav-toggle {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 3.5rem;
+    right: 0;
+  }
+  nav .nav-link-nav {
+    position: absolute;
+    transition: left 0.4s ease;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    display: block;
+    background-color: #e8790c;
+    margin-top: 3rem;
+    padding-top: 6rem;
+  }
+  nav .nav-link-nav li {
+    display: block;
+    text-align: center;
+  }
+  nav .nav-link-nav li .nav-link {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 2rem;
+  }
+  nav .nav-closed {
+    left: 100%;
+  }
+  nav .nav-open {
+    left: 0%;
+  }
+}
+@media screen and (max-width: 350px) {
+  nav {
+    height: 4rem;
+  }
+}
+
+/*# sourceMappingURL=css.styles.css.map */

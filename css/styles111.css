@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --c1: #ffa40d;
+  --c2: #e8790c;
+  --c3: #ff5900;
+  --c4: #e8390c;
+  --c5: #ff1b0d;
+}
+
+html {
+  position: relative;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+/* offsets internal link position to account for navbar */
+a.anchor {
+  display: block;
+  position: relative;
+  /* height of nav + 10px :*/
+  top: -70px;
+  visibility: hidden;
+}
+
+/* ---------- navbar */
+.nav {
+  z-index: 10;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  /* background-color: rgb(73, 163, 0); */
+  transition-duration: 0.4s;
+  text-decoration: none;
+}
+
+.nav-scroll {
+  opacity: 1;
+  visibility: visible;
+  background-color: white;
+  border-bottom: 2px solid var(--c2);
+  box-shadow: 5px 5px 5px rgba(255, 68, 0, 0.3);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0);
+}
+.nav-link-scroll {
+  color: rgb(23, 44, 6);
+}
+
+.letter {
+  margin-left: -15px;
+
+  transition: color 0.2s ease, margin 0.8s ease;
+}
+
+.letter-scroll {
+  margin-left: 0px;
+  display: inline-block;
+  transform: rotate(360deg);
+  margin-right: 9px;
+  color: rgb(23, 44, 6);
+  transition: 0.5s;
+}
+nav ul {
+}
+nav ul li {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+#brand {
+  position: relative;
+}
+
+/* ---------- banner */
+.banner {
+  display: flex;
+  /* text-align: center; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  margin-bottom: 30px;
+  background-color: var(--c2);
+  background-image: url("assets/sunrise-clouds2.jpg");
+  background-size: cover;
+  padding: 2%;
+}
+
+.banner-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  color: white;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.banner-content::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0);
+  opacity: 20%;
+  /* border: 5px solid red; */
+}
+
+.banner-intro {
+  align-self: center;
+  margin-left: auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#banner-intro1 {
+  letter-spacing: 0.8rem;
+  font-size: 1em;
+  animation-delay: 0.2s;
+}
+#banner-intro2 {
+  letter-spacing: 0.3rem;
+  font-size: 0.6em;
+  animation-delay: 0.4s;
+  margin-bottom: 3rem;
+}
+#banner-intro3 {
+  opacity: 0;
+  animation-delay: 0.7s;
+}
+
+.banner-clock {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  opacity: 70%;
+}
+
+#banner-timeofday {
+  letter-spacing: 0.2em;
+  font-size: 0.5em;
+  display: inline-block;
+}
+
+#clock {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 0.5rem;
+}
+
+.fa {
+  color: var(--c2);
+}
+.text-roll {
+  transform: rotateX(-90deg);
+  transform-origin: 0 2rem -2rem;
+  transform-style: preserve-3d;
+  /* perspective: 1000px; */
+  /* origin need to be moved if line height/fontsize is changed */
+  line-height: 1;
+  animation: text-in 1s ease 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes text-in {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+.text-slide {
+  transform: translateX(-300px);
+  animation: text-slide 0.5s ease 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes text-slide {
+  0% {
+    transform: translateX(-300px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* ---------- main content */
+body {
+  background-color: white;
+}
+
+main {
+  margin: 0 5%;
+  height: auto;
+}
+
+section {
+  position: relative;
+  margin-bottom: 30px;
+  height: 50vh;
+  background-color: var(--c2);
+}
+/* Or whatever is above the footer */
+section:last-child {
+  margin-bottom: 90px;
+}
+
+section h1 {
+  /* position: absolute;
+  top: -2rem;
+  left: -1rem; */
+  font-size: 5rem;
+}
+
+/* ---------- footer */
+.footer {
+  padding: 1rem;
+  background-color: $c5;
+  position: absolute;
+  margin-bottom: 0;
+  bottom: 0;
+  width: 100%;
+}
