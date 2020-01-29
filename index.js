@@ -14,11 +14,11 @@ const Greeting = () => {
   const now = new Date();
   const hours = now.getHours();
   if (hours >= 18) {
-    return `Good <br> morning`;
+    return `Good evening`;
   } else if (hours >= 12) {
-    return `Good <br> afternoon`;
+    return `Good afternoon`;
   } else {
-    return `Good <br> evening`;
+    return `Good morning`;
   }
 };
 timeofday.innerHTML = Greeting();
