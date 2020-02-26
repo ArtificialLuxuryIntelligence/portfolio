@@ -485,7 +485,7 @@ nav .nav-toggle {
   /* text-align: center; */
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-image: url("../assets/sunrise-clouds2.jpg");
   background-size: cover;
@@ -500,7 +500,7 @@ nav .nav-toggle {
   align-items: center;
   justify-content: space-between;
   color: white;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 100;
 }
 .banner .banner-content::before {
@@ -509,14 +509,16 @@ nav .nav-toggle {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: black;
   opacity: 20%;
   /* border: 5px solid red; */
 }
+.banner .banner-content .spacer {
+  height: 70px;
+}
 .banner .banner-content .banner-intro {
   opacity: 90%;
-  margin-top: 20%;
   text-align: center;
   text-transform: uppercase;
 }
@@ -528,7 +530,7 @@ nav .nav-toggle {
 .banner .banner-content .banner-intro #banner-intro2 {
   letter-spacing: 0.3rem;
   font-size: 0.6em;
-  margin-bottom: 5vh;
+  margin-bottom: 1rem;
   animation-delay: 0.4s;
 }
 .banner .banner-content .banner-intro #banner-intro3 {
@@ -536,7 +538,7 @@ nav .nav-toggle {
   animation-delay: 0.7s;
 }
 .banner .banner-content .banner-intro #banner-intro3 .fa {
-  padding: 15%;
+  padding: 3rem;
   color: #ffa40d;
   transition: 0.3s;
 }
@@ -611,12 +613,17 @@ nav .nav-toggle {
 }
 
 /* ---------- main content ---------- */
+body {
+  background-color: #e6e6e6;
+}
+
 main {
   padding: 0 10%;
   height: auto;
 }
 
 section {
+  font-size: 0.8rem;
   position: relative;
   margin-top: 4rem;
   min-height: 40vh;
@@ -638,19 +645,56 @@ section h2 {
 section .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100%;
+  grid-template-rows: auto;
   grid-gap: 1rem;
 }
 section .grid-container .grid-item {
   padding: 1rem;
   border: 2px solid white;
 }
+section .grid-container .grid-item ul {
+  list-style: disc;
+}
 section p {
+  font-size: 0.8rem;
   margin-bottom: 1rem;
   line-height: 125%;
 }
 section:last-child {
   margin-bottom: 90px;
+}
+
+/* ---------- contact */
+.contact form {
+  max-width: 700px;
+}
+.contact form .form-field {
+  display: flex;
+  margin: 0 0 1rem 0;
+}
+.contact form label {
+  text-align: right;
+  width: 30%;
+}
+.contact form label,
+.contact form input,
+.contact form textarea {
+  max-width: 70%;
+  padding: 0.2rem;
+}
+.contact form textarea {
+  width: 70%;
+  height: 6rem;
+}
+.contact form input,
+.contact form textarea {
+  border: 2px solid #aaa;
+  border-radius: 2px;
+}
+.contact form #submit {
+  margin-left: auto;
+  background-color: white;
+  width: auto;
 }
 
 /* ---------- footer */
@@ -718,13 +762,15 @@ nav .nav-toggle .hamburger::after {
     transform: translateY(-3px) rotate(-90deg);
   }
   nav ul {
-    flex-direction: column;
     display: inline-block;
+    flex-direction: column;
     height: auto;
     position: absolute;
     top: 4rem;
     right: 0;
     margin-right: 0;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
     background-color: #e8790c;
     transition: 0.4s ease;
   }
@@ -732,10 +778,10 @@ nav .nav-toggle .hamburger::after {
     margin: 0;
   }
   nav ul li .nav-link {
-    text-align: center;
     width: 100%;
     display: inline-block;
     padding: 2.5rem 4rem;
+    padding: 2.5rem 3rem 2.5rem 1.5rem;
     font-size: 1.6rem;
     border-bottom: 1px solid white;
   }
@@ -746,6 +792,26 @@ nav .nav-toggle .hamburger::after {
   nav .nav-open {
     right: 0%;
     opacity: 1;
+  }
+
+  .contact form .form-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact form label {
+    text-align: left;
+  }
+  .contact form label,
+.contact form input,
+.contact form textarea {
+    max-width: 100%;
+  }
+  .contact form textarea {
+    width: 100%;
+  }
+  .contact form #submit {
+    padding: 1rem 1rem;
   }
 }
 @media screen and (max-width: 350px) {

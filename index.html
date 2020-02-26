@@ -24,21 +24,22 @@
         <div class="nav-toggle"><div class="hamburger"></div></div>
         <ul class="nav-link-nav nav-closed">
           <!-- start with projects? -->
-          <li><a class="nav-link" href="#about-anchor">about</a></li>
-          <li><a class="nav-link" href="#projects-anchor">projects</a></li>
-          <li><a class="nav-link" href="#contact-anchor">contact</a></li>
+          <li><a class="nav-link" href="#about">about</a></li>
+          <li><a class="nav-link" href="#projects">projects</a></li>
+          <li><a class="nav-link" href="#contact">contact</a></li>
         </ul>
       </nav>
     </header>
 
     <div class="banner">
       <div class="banner-content">
+        <div class="spacer"></div>
         <div class="banner-intro">
           <h1 id="banner-intro1" class="text-roll">Ali Khokhar<!--  --></h1>
           <h2 id="banner-intro2" class="text-roll">
             Full-stack developer
           </h2>
-          <a id="banner-intro3" class="text-roll" href="#about-anchor">
+          <a id="banner-intro3" class="text-roll" href="#about">
             <i class="fa fa-angle-double-down fa-2x"></i>
           </a>
         </div>
@@ -175,8 +176,8 @@
     </div>
 
     <main class="main-content">
-      <section id="about">
-        <a class="anchor" id="about-anchor"></a>
+      <section class="about">
+        <a class="anchor" id="about"></a>
         <h1>about</h1>
 
         <div class="grid-container">
@@ -251,16 +252,110 @@
           </div>
         </div>
       </section>
-      <section>
-        <a class="anchor" id="projects-anchor"></a>
 
+      <section class="projects">
+        <a class="anchor" id="projects"></a>
         <h1>projects</h1>
+        <div class="grid-container">
+          <div class="grid-item">
+            <h2>Squiggle Game</h2>
+            <h3>Description</h3>
+            <p>
+              A drawing game where users can complete drawing a doodle based on
+              a 'squiggle' created by another user.
+            </p>
+            <p>A separate gallery section shows some of the creations.</p>
+            <p>
+              The game currently works as a stand alone item but will be
+              incorporated into a larger mixed-media group art project.
+            </p>
+            <h3>Technical</h3>
+
+            <ul>
+              <li>HTML / CSS / JS</li>
+              <li>Node/Express app</li>
+              <li>MongoDB Atlas database</li>
+              <li>Handlebars templating</li>
+            </ul>
+            <ul>
+              <li>
+              <li>Fully responsive desgin</li>
+
+                Custom drawing (with smoothing) canvas component
+              </li>
+              <li>Infinite scroll</li>
+            </ul>
+            <p></p>
+          </div>
+          <div class="grid-item">
+            <h3>Demo</h3>
+          </div>
+          <div class="grid-item">
+            <h2>LGP Photography Portfolio Site</h2>
+            <h3>Description</h3>
+            <p>
+              A photography portfolio website.
+            </p>
+            <!-- <p>Custom built with some design input from the client</p> -->
+
+            <h3>Technical</h3>
+            <ul>
+              <li>HTML / SCSS / JS</li>
+              <li>Webpack bundling</li>
+            </ul>
+            <ul>
+              <li>Fully responsive desgin</li>
+              <li>Page loaders</li>
+              <li>Page transition effect</li>
+              <li>Lazy loaded full-size images in a lightbox</li>
+              <li>Slideshow</li>
+            </ul>
+
+            <p></p>
+          </div>
+          <div class="grid-item">
+          <h3>Demo</h3>
+          </div>
+          <div class="grid-item">
+            <h2>Vocabify</h3>
+            <h3>Description</h3>
+            <p></p>
+            <h3>Technical</h3>
+            <ul>
+              <li>..</li>
+              <li>..</li>
+              <li>...</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <a class="anchor" id="contact-anchor"></a>
+      <section class="contact">
+        <a class="anchor" id="contact"></a>
 
         <h1>contact</h1>
+
+        <form method="post" action="https://formspree.io/myyjwvkw" id="form" class="validate">
+          <div class="form-field">
+            <label for="full-name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Joe Bloggs" required />
+          </div>
+          <div class="form-field">
+            <label for="email-input">Email</label>
+            <input type="email" name="email-input" id="email-input" placeholder="example@domain.com" required />
+          </div>
+        
+          <div class="form-field">
+            <label for="message">  Your message:</label>
+            <textarea name="message"></textarea>
+          </div>
+
+          <div class="form-field">
+            <input id="submit" type="submit" value="Submit">
+          </div>
+        </form>
+
+    
       </section>
     </main>
 
