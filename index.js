@@ -39,7 +39,7 @@ timeofday.innerHTML = Greeting();
 //   prevScrollpos = currentScrollPos;
 // };
 
-// / Intersection observers
+// Intersection observers
 
 function convertRemToPixels(rem) {
   return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
@@ -124,3 +124,9 @@ main.addEventListener("click", () => {
     toggleNav();
   }
 });
+
+// footer
+
+const year = document.getElementById("year");
+let thisYear = new Date().getFullYear();
+year.innerText = thisYear;

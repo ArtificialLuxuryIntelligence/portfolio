@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <script
+      src="https://kit.fontawesome.com/5cd4c048c0.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
@@ -35,15 +35,16 @@
       <div class="banner-content">
         <div class="spacer"></div>
         <div class="banner-intro">
-          <h1 id="banner-intro1" class="text-roll">Ali Khokhar<!--  --></h1>
+          <h1 id="banner-intro1" class="text-roll">Ali Khokhar</h1>
           <h2 id="banner-intro2" class="text-roll">
             Full-stack developer
           </h2>
           <a id="banner-intro3" class="text-roll" href="#about">
-            <i class="fa fa-angle-double-down fa-2x"></i>
+            <i class="fa fa-chevron-down fa-2x"></i>
           </a>
         </div>
 
+        <!-- SVG clock -- CREDIT: most code from https://codepen.io/gene7299/pen/eJeoPq -->
         <div class="banner-clock">
           <svg
             id="clock"
@@ -182,7 +183,7 @@
 
         <div class="grid-container">
           <div class="grid-item">
-            <h2>me</h2>
+            <h2>Me</h2>
             <p>
               Over the past several months, I have been intensively teaching
               myself all things web-development. I have relied on the wealth of
@@ -192,15 +193,15 @@
             </p>
             <p>
               I am looking for a position in a team where I can learn, grow and
-              add value.
+              add value in an enthusiastic, supportive environment.
             </p>
             <p>
-              Please see a selection of my projects above or my Github account
-              for examples of my work
+              Please see a selection of my projects below for examples of my
+              work.
             </p>
           </div>
           <div class="grid-item">
-            <h2>technologies</h2>
+            <h2>Technologies</h2>
             <i>Sass</i>
             <i>HTML5</i>
             <i>Javascript</i>
@@ -261,8 +262,8 @@
             <h2>Squiggle Game</h2>
             <h3>Description</h3>
             <p>
-              A drawing game where users can complete drawing a doodle based on
-              a 'squiggle' created by another user.
+              A drawing game where visitors can complete drawing a doodle based
+              on a 'squiggle' created by another user.
             </p>
             <p>A separate gallery section shows some of the creations.</p>
             <p>
@@ -273,25 +274,28 @@
 
             <ul>
               <li>HTML / CSS / JS</li>
-              <li>Node/Express app</li>
-              <li>MongoDB Atlas database</li>
-              <li>Handlebars templating</li>
+              <li>Express with Handlebars templating</li>
+              <li>MongoDB Atlas</li>
             </ul>
             <ul>
-              <li>
+              <li>Canvas API with custom drawing (with smoothing)</li>
               <li>Fully responsive desgin</li>
-
-                Custom drawing (with smoothing) canvas component
-              </li>
               <li>Infinite scroll</li>
             </ul>
             <p></p>
           </div>
-          <div class="grid-item">
-            <h3>Demo</h3>
+          <div class="grid-item demo">
+            <!-- <h3>Demo</h3> -->
+            <img src="#" alt="" />
+
+            <a href="#">Live Demo <i class="fas fa-external-link-alt"></i> </a>
+            <a href="#">Code <i class="fab fa-github"></i> </a>
           </div>
+
+          <!-- <div class="spacer"></div> -->
+
           <div class="grid-item">
-            <h2>LGP Photography Portfolio Site</h2>
+            <h2>LGA Photography Portfolio Site</h2>
             <h3>Description</h3>
             <p>
               A photography portfolio website.
@@ -307,25 +311,50 @@
               <li>Fully responsive desgin</li>
               <li>Page loaders</li>
               <li>Page transition effect</li>
-              <li>Lazy loaded full-size images in a lightbox</li>
+              <li>Lightbox with lazy loaded images</li>
               <li>Slideshow</li>
             </ul>
 
             <p></p>
           </div>
-          <div class="grid-item">
-          <h3>Demo</h3>
+          <div class="grid-item demo">
+            <!-- <h3>Demo</h3> -->
+            <img src="#" alt="" />
+
+            <a href="#">Live Demo <i class="fas fa-external-link-alt"></i> </a>
+            <a href="#">Code <i class="fab fa-github"></i> </a>
           </div>
           <div class="grid-item">
-            <h2>Vocabify</h3>
+            <h2>Vocabify</h2>
             <h3>Description</h3>
-            <p></p>
+            <p>
+              A web application designed to help language users learn new
+              vocabulary based on their current level in various languages
+              (currently English, French and Spanish).
+            </p>
+            <p>
+              Users can submit text and will be given a list of words from the
+              text that they may not know accompanied by their definitions
+            </p>
+            <p>Users can save the words for later reference</p>
+
             <h3>Technical</h3>
             <ul>
-              <li>..</li>
-              <li>..</li>
-              <li>...</li>
+              <li>MERN stack application</li>
+              <li>bcryptjs</li>
+              <li>MongoDB Atlas</li>
+              <li>Unofficial Google dictionary API</li>
+              <li>
+                Server-side algorithm determines what vocabulary to send to user
+                based on user data and word frequency lists.
+              </li>
             </ul>
+          </div>
+          <div class="grid-item demo">
+            <!-- <h3>Demo</h3> -->
+            <img src="#" alt="" />
+            <a href="#">Live Demo <i class="fas fa-external-link-alt"></i> </a>
+            <a href="#">Code <i class="fab fa-github"></i> </a>
           </div>
         </div>
       </section>
@@ -335,32 +364,47 @@
 
         <h1>contact</h1>
 
-        <form method="post" action="https://formspree.io/myyjwvkw" id="form" class="validate">
+        <form
+          method="post"
+          action="https://formspree.io/myyjwvkw"
+          id="form"
+          class="validate"
+        >
           <div class="form-field">
             <label for="full-name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Joe Bloggs" required />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your Name"
+              required
+            />
           </div>
           <div class="form-field">
             <label for="email-input">Email</label>
-            <input type="email" name="email-input" id="email-input" placeholder="example@domain.com" required />
+            <input
+              type="email"
+              name="email-input"
+              id="email-input"
+              placeholder="example@domain.com"
+              required
+            />
           </div>
-        
+
           <div class="form-field">
-            <label for="message">  Your message:</label>
+            <label for="message"> Your message:</label>
             <textarea name="message"></textarea>
           </div>
 
           <div class="form-field">
-            <input id="submit" type="submit" value="Submit">
+            <input id="submit" type="submit" value="Submit" />
           </div>
         </form>
-
-    
       </section>
     </main>
 
     <footer>
-      Footer content
+      <p>Ali Khokhar <span id="year"></span></p>
     </footer>
     <script src="index.js"></script>
   </body>
