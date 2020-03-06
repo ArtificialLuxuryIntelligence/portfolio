@@ -244,8 +244,7 @@ section {
   margin-top: 4rem;
   min-height: 40vh;
   padding: 1.5rem 2rem;
-  //   change actual colours not opacity:
-  // opacity: 80%;
+
   background-color: $c1;
   // color: black;
   border-left: 1rem solid $c4;
@@ -260,7 +259,7 @@ section {
     text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.1);
   }
   h2 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.9rem;
     text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.07);
   }
   h3 {
@@ -272,13 +271,14 @@ section {
   h3 {
     color: $c4;
   }
+
   p,
   li,
   label {
     color: $c4dark;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
     line-height: 125%;
   }
@@ -310,8 +310,8 @@ section {
 
     .grid-item {
       padding: 1rem;
-      // background-color: $c6;
-
+      background-color: $c1light;
+      border-radius: 6px;
       ul {
         margin-block-start: 0;
         list-style: disc;
@@ -521,6 +521,14 @@ footer {
         // ul {
         //   }
         // }
+      }
+      .demo {
+        text-align: center;
+        border-bottom: 1px solid $cpop;
+      }
+
+      .demo:last-of-type {
+        border-bottom: none;
       }
     }
   }
