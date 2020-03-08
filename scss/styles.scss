@@ -1,12 +1,11 @@
 //setup files
+@import "setup/variables.scss";
+@import "setup/normalize.scss";
+@import "setup/typography.scss";
 
 @import "setup/border-box.scss";
 @import "setup/clearfix.scss";
 @import "setup/global.scss";
-
-@import "setup/normalize.scss";
-@import "setup/typography.scss";
-@import "setup/variables.scss";
 
 //content
 

@@ -24,8 +24,8 @@
         <div class="nav-toggle"><div class="hamburger"></div></div>
         <ul class="nav-link-nav nav-closed">
           <!-- start with projects? -->
-          <li><a class="nav-link" href="#about">about</a></li>
           <li><a class="nav-link" href="#projects">projects</a></li>
+          <li><a class="nav-link" href="#about">about</a></li>
           <li><a class="nav-link" href="#contact">contact</a></li>
         </ul>
       </nav>
@@ -39,8 +39,8 @@
           <h2 id="banner-intro2" class="text-roll">
             Full-stack developer
           </h2>
-          <a id="banner-intro3" class="text-roll" href="#about">
-            <i class="fa fa-chevron-down fa-2x"></i>
+          <a id="banner-intro3" class="text-roll" href="#projects">
+            <i class="fa fa-chevron-down fa-2x "></i>
           </a>
         </div>
 
@@ -177,6 +177,122 @@
     </div>
 
     <main class="main-content">
+      <section class="projects">
+        <a class="anchor" id="projects"></a>
+        <h1>projects</h1>
+        <div class="grid-container">
+          <div class="grid-item">
+            <h2>Squiggle Game</h2>
+            <h3>Description</h3>
+            <p>
+              A drawing game where visitors can complete drawing a doodle based
+              on a 'squiggle' created by another user.
+            </p>
+            <p>A separate gallery section shows some of the creations.</p>
+            <p>
+              The game currently works as a stand alone item but will be
+              incorporated into a larger mixed-media group art project.
+            </p>
+            <h3>Technical</h3>
+
+            <ul>
+              <li>HTML / CSS / JS</li>
+              <li>Express with Handlebars templating</li>
+              <li>MongoDB Atlas</li>
+            </ul>
+            <ul>
+              <li>Canvas API with custom drawing (with smoothing)</li>
+              <li>Fully responsive desgin</li>
+              <li>Infinite scroll</li>
+            </ul>
+            <p></p>
+          </div>
+          <div class="grid-item demo">
+            <!-- <h3>Demo</h3> -->
+            <img src="#" alt="" />
+
+            <a href="#">Live Demo <i class="fas fa-external-link-alt"></i> </a>
+            <a href="#">Code <i class="fab fa-github"></i> </a>
+          </div>
+
+          <!-- <div class="spacer"></div> -->
+
+          <div class="grid-item">
+            <h2>LGA Photography Portfolio Site</h2>
+            <h3>Description</h3>
+            <p>
+              A photography portfolio website. A multipage showcase of the
+              photographers work.
+            </p>
+            <p>
+              The design is minimalist and allows the focus of the pages to be
+              the photographs themselves while still allowing for some subtle
+              styling.
+            </p>
+            <!-- <p>Custom built with some design input from the client</p> -->
+
+            <h3>Technical</h3>
+            <ul>
+              <li>HTML / SCSS / JS</li>
+              <li>Webpack bundling</li>
+            </ul>
+            <ul>
+              <li>Fully responsive desgin</li>
+              <li>Page loaders</li>
+              <li>Page transition effect</li>
+              <li>Lightbox with lazy loaded images</li>
+              <li>Slideshow</li>
+            </ul>
+
+            <p></p>
+          </div>
+          <div class="grid-item demo">
+            <!-- <h3>Demo</h3> -->
+            <!-- <img src="#" alt="" /> -->
+            <img src="assets/lgaptest.gif" />
+            <!-- <img src="" /> -->
+            <span>
+              <a href="#"
+                >Live Demo <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="#">Code <i class="fab fa-github"></i> </a
+            ></span>
+          </div>
+          <div class="grid-item">
+            <h2>Vocabify</h2>
+            <h3>Description</h3>
+            <p>
+              A web application designed to help language users learn new
+              vocabulary based on their current level in various languages
+              (currently English, French and Spanish).
+            </p>
+            <p>
+              Users can submit text and will be given a list of words from the
+              text that they may not know accompanied by their definitions
+            </p>
+            <p>Users can save the words for later reference</p>
+
+            <h3>Technical</h3>
+            <ul>
+              <li>MERN stack application</li>
+              <li>bcryptjs</li>
+              <li>MongoDB Atlas</li>
+              <li>Unofficial Google dictionary API</li>
+              <li>
+                Server-side algorithm determines what vocabulary to send to user
+                based on input text, user data and word frequency lists.
+              </li>
+            </ul>
+          </div>
+          <div class="grid-item demo">
+            <!-- <h3>Demo</h3> -->
+            <img src="#" alt="" />
+            <a href="#">Live Demo <i class="fas fa-external-link-alt"></i> </a>
+            <a href="#">Code <i class="fab fa-github"></i> </a>
+          </div>
+        </div>
+      </section>
+
       <section class="about">
         <a class="anchor" id="about"></a>
         <h1>about</h1>
@@ -196,12 +312,12 @@
               add value in an enthusiastic, supportive environment.
             </p>
             <p>
-              Please see a selection of my projects below for examples of my
+              Please see a selection of my projects above for examples of my
               work.
             </p>
           </div>
           <div class="grid-item">
-            <h2>Technologies</h2>
+            <h2>What I have used</h2>
             <i>Sass</i>
             <i>HTML5</i>
             <i>Javascript</i>
@@ -250,111 +366,6 @@
             <i>Javascript</i> <i>Sass</i>
             <i>HTML5</i>
             <i>Javascript</i> <i>Sass</i>
-          </div>
-        </div>
-      </section>
-
-      <section class="projects">
-        <a class="anchor" id="projects"></a>
-        <h1>projects</h1>
-        <div class="grid-container">
-          <div class="grid-item">
-            <h2>Squiggle Game</h2>
-            <h3>Description</h3>
-            <p>
-              A drawing game where visitors can complete drawing a doodle based
-              on a 'squiggle' created by another user.
-            </p>
-            <p>A separate gallery section shows some of the creations.</p>
-            <p>
-              The game currently works as a stand alone item but will be
-              incorporated into a larger mixed-media group art project.
-            </p>
-            <h3>Technical</h3>
-
-            <ul>
-              <li>HTML / CSS / JS</li>
-              <li>Express with Handlebars templating</li>
-              <li>MongoDB Atlas</li>
-            </ul>
-            <ul>
-              <li>Canvas API with custom drawing (with smoothing)</li>
-              <li>Fully responsive desgin</li>
-              <li>Infinite scroll</li>
-            </ul>
-            <p></p>
-          </div>
-          <div class="grid-item demo">
-            <!-- <h3>Demo</h3> -->
-            <img src="#" alt="" />
-
-            <a href="#">Live Demo <i class="fas fa-external-link-alt"></i> </a>
-            <a href="#">Code <i class="fab fa-github"></i> </a>
-          </div>
-
-          <!-- <div class="spacer"></div> -->
-
-          <div class="grid-item">
-            <h2>LGA Photography Portfolio Site</h2>
-            <h3>Description</h3>
-            <p>
-              A photography portfolio website.
-            </p>
-            <!-- <p>Custom built with some design input from the client</p> -->
-
-            <h3>Technical</h3>
-            <ul>
-              <li>HTML / SCSS / JS</li>
-              <li>Webpack bundling</li>
-            </ul>
-            <ul>
-              <li>Fully responsive desgin</li>
-              <li>Page loaders</li>
-              <li>Page transition effect</li>
-              <li>Lightbox with lazy loaded images</li>
-              <li>Slideshow</li>
-            </ul>
-
-            <p></p>
-          </div>
-          <div class="grid-item demo">
-            <!-- <h3>Demo</h3> -->
-            <img src="#" alt="" />
-
-            <a href="#">Live Demo <i class="fas fa-external-link-alt"></i> </a>
-            <a href="#">Code <i class="fab fa-github"></i> </a>
-          </div>
-          <div class="grid-item">
-            <h2>Vocabify</h2>
-            <h3>Description</h3>
-            <p>
-              A web application designed to help language users learn new
-              vocabulary based on their current level in various languages
-              (currently English, French and Spanish).
-            </p>
-            <p>
-              Users can submit text and will be given a list of words from the
-              text that they may not know accompanied by their definitions
-            </p>
-            <p>Users can save the words for later reference</p>
-
-            <h3>Technical</h3>
-            <ul>
-              <li>MERN stack application</li>
-              <li>bcryptjs</li>
-              <li>MongoDB Atlas</li>
-              <li>Unofficial Google dictionary API</li>
-              <li>
-                Server-side algorithm determines what vocabulary to send to user
-                based on user data and word frequency lists.
-              </li>
-            </ul>
-          </div>
-          <div class="grid-item demo">
-            <!-- <h3>Demo</h3> -->
-            <img src="#" alt="" />
-            <a href="#">Live Demo <i class="fas fa-external-link-alt"></i> </a>
-            <a href="#">Code <i class="fab fa-github"></i> </a>
           </div>
         </div>
       </section>

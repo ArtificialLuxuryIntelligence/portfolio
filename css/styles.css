@@ -1,66 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Chivo&display=swap");
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  content: "";
-  clear: both;
-  height: 0;
-}
-
-*::selection {
-  background: red;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  width: 100%;
-  min-height: 100%;
-  margin: 0;
-}
-
-.wrapper {
-  max-width: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: blue;
-}
-
-img {
-  display: block;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -68,6 +5,7 @@ ul {
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Chivo&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -405,6 +343,68 @@ html {
 }
 
 html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+*::selection {
+  background: #ff1b0d;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+html {
   scroll-behavior: smooth;
   font-size: 16px;
 }
@@ -461,10 +461,19 @@ nav ul {
   align-items: center;
   height: 100%;
   list-style-type: none;
-  margin-right: 1rem;
 }
 nav ul li {
-  margin-left: 2.5rem;
+  display: flex;
+  height: 100%;
+}
+nav ul li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+}
+nav ul li a:hover {
+  background-color: #ff1b0d;
 }
 nav .nav-toggle {
   height: 100%;
@@ -475,7 +484,6 @@ nav .nav-toggle {
   opacity: 1;
   visibility: visible;
   background-color: #ff5900;
-  border-bottom: 2px solid #e8790c;
   transition-duration: 0.4s;
 }
 
@@ -488,6 +496,7 @@ nav .nav-toggle {
   height: 100%;
   width: 100%;
   background-image: url("../assets/sunrise-clouds2.jpg");
+  background-image: url("../assets/IMG_20190209_180214_301.jpg");
   background-size: cover;
 }
 .banner .banner-content {
@@ -510,7 +519,8 @@ nav .nav-toggle {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.2;
+  background-color: black;
+  opacity: 0.4;
 }
 .banner .banner-content .spacer {
   height: 70px;
@@ -568,10 +578,10 @@ nav .nav-toggle {
   /* perspective: 1000px; */
   /* origin need to be moved if line height/fontsize is changed */
   line-height: 1;
-  animation: text-in 1s ease 1;
+  animation: text-roll 1s ease 1;
   animation-fill-mode: forwards;
 }
-@keyframes text-in {
+@keyframes text-roll {
   0% {
     opacity: 0;
     transform: rotateX(-90deg);
@@ -609,14 +619,29 @@ nav .nav-toggle {
     transform: translateX(0px);
   }
 }
+.banner .pulse {
+  display: block;
+  animation: pulse 0.6s ease infinite;
+  animation-direction: alternate;
+}
+@keyframes pulse {
+  0% {
+    transform: translatey(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translatey(10px);
+    opacity: 1;
+  }
+}
 
 /* ---------- main content ---------- */
 body {
-  background-color: #e7e7e7;
+  background-color: #f3f3f3;
 }
 
 main {
-  padding: 0 10%;
+  padding: 0 12.5%;
   height: auto;
 }
 
@@ -625,18 +650,16 @@ section {
   position: relative;
   margin-top: 4rem;
   min-height: 40vh;
-  padding: 1.5rem 2rem;
-  background-color: #f8d7a3;
-  border-left: 1rem solid #ff5900;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.185);
-  border-radius: 6px;
+  padding: 0rem 2rem 1.5 2rem;
+  border-left: 0.5px solid #ff5900;
+  border-right: 0.5px solid #ff5900;
 }
 section h1 {
-  font-size: 4rem;
-  margin-left: 1rem;
-  margin-bottom: 1.5rem;
-  margin-top: 1rem;
-  text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.1);
+  font-size: 6rem;
+  margin: 0 0 3rem 0rem;
+  text-shadow: 1px 4px 3px rgba(133, 133, 133, 0.301);
+  padding-bottom: 2rem;
+  border-bottom: 0.5px solid #ff5900;
 }
 section h2 {
   margin-bottom: 0.9rem;
@@ -682,13 +705,13 @@ section .grid-container {
   grid-template-rows: auto;
   grid-gap: 2rem 1rem;
 }
-section .grid-container .spacer {
-  border-top: 0.5rem solid black;
-}
 section .grid-container .grid-item {
-  padding: 1rem;
-  background-color: #ffeacb;
-  border-radius: 6px;
+  padding: 3rem;
+  background-color: #fafafa;
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 4rem;
 }
 section .grid-container .grid-item ul {
   margin-block-start: 0;
@@ -698,20 +721,23 @@ section .grid-container .grid-item ul li {
   margin-left: 1rem;
   line-height: 150%;
 }
-section .grid-container .grid-item img {
-  width: 100%;
-  min-height: 400px;
-  margin-bottom: 1.4rem;
-  border: 1px solid #bebdbd;
-}
 section .grid-container .demo {
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+section .grid-container .demo img {
+  width: 100%;
 }
 section:last-child {
   margin-bottom: 90px;
 }
 
 /* ---------- contact */
+.contact h1 {
+  margin-bottom: 2rem;
+}
 .contact form {
   padding: 1rem;
   max-width: 1000px;
@@ -760,21 +786,14 @@ footer p {
   text-align: right;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1280px) {
   html {
     font-size: 16px;
   }
 
-  .banner .banner-content {
-    justify-content: center;
-  }
-  .banner .banner-content .banner-clock {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 14px;
+  main {
+    padding: 0 5%;
+    height: auto;
   }
 
   nav {
@@ -814,6 +833,9 @@ nav .nav-toggle .hamburger::after {
   nav .open .hamburger::after {
     transform: translateY(-3px) rotate(-90deg);
   }
+  nav h1 {
+    text-align: center;
+  }
   nav ul {
     display: inline-block;
     flex-direction: column;
@@ -822,8 +844,8 @@ nav .nav-toggle .hamburger::after {
     top: 4rem;
     right: 0;
     margin-right: 0;
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
     background-color: #e8790c;
     transition: 0.4s ease;
     overflow: hidden;
@@ -834,8 +856,7 @@ nav .nav-toggle .hamburger::after {
   nav ul li .nav-link {
     width: 100%;
     display: inline-block;
-    padding: 2.5rem 4rem;
-    padding: 2.5rem 3rem 2.5rem 1.5rem;
+    padding: 2.5rem 1rem 2.5rem 2rem;
     font-size: 1.6rem;
     border-bottom: 1px solid white;
   }
@@ -855,9 +876,16 @@ nav .nav-toggle .hamburger::after {
     display: grid;
     grid-template-columns: 1fr;
   }
+  section .grid-container .grid-item {
+    padding: 3rem 2rem;
+  }
   section .grid-container .demo {
     text-align: center;
     border-bottom: 1px solid white;
+    align-items: center;
+  }
+  section .grid-container .demo img {
+    width: 100%;
   }
   section .grid-container .demo:last-of-type {
     border-bottom: none;
@@ -884,9 +912,31 @@ nav .nav-toggle .hamburger::after {
     padding: 0.4rem 1rem;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 1023px) {
+  html {
+    font-size: 14px;
+  }
+
+  .banner .banner-content {
+    justify-content: center;
+  }
+  .banner .banner-content .banner-clock {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
   nav {
     height: 4rem;
+  }
+
+  section h1 {
+    font-size: 4rem;
+  }
+  section .grid-container .grid-item {
+    padding: 2.5rem 2rem;
+  }
+  section .grid-container .demo img {
+    width: 100%;
   }
 }
 

@@ -85,7 +85,18 @@ const observer2 = new IntersectionObserver(function(entries, observer) {
 
 observer2.observe(banner);
 
+// chevron animation
+
+const arrow = document.getElementById("banner-intro3");
+arrow.addEventListener("animationend", () => {
+  console.log("ended");
+  arrow.style.animationDelay = "0s";
+  arrow.classList.contains("pulse") ? null : arrow.classList.add("pulse");
+});
+
 // Banner clock
+
+// credit: https://codepen.io/gene7299/pen/eJeoPq
 
 var date = new Date();
 var seconds = date.getSeconds();
