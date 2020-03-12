@@ -555,6 +555,7 @@ footer {
         padding: 3rem 2rem;
       }
       .demo {
+        padding: 6rem;
         text-align: center;
         border-bottom: 1px solid $cpop;
         align-items: center;
@@ -570,35 +571,75 @@ footer {
   }
 
   .contact {
+    // form {
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    //   // max-width: 80%;
+    //   .form-field {
+    //     display: flex;
+    //     flex-direction: column;
+    //   }
+    //   label {
+    //     text-align: left;
+    //   }
+    //   label,
+    //   input,
+    //   textarea {
+    //     max-width: 100%;
+    //   }
+    //   textarea {
+    //     width: 100%;
+    //   }
+    //   #submit {
+    //     margin-right: 0;
+    //     padding: 0.4rem 1rem;
+    //     // width: 60%;
+    //   }
+    // }
     form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .form-field {
-        display: flex;
-        flex-direction: column;
+        max-width: 70%;
         width: 100%;
+        display: block;
+        label {
+          text-align: left;
+          display: block;
+        }
+
+        textarea {
+          max-width: 100%;
+          width: 100%;
+          display: block;
+        }
       }
-      label {
-        text-align: left;
-      }
-      label,
-      input,
-      textarea {
-        max-width: 100%;
-      }
-      textarea {
-        width: 100%;
+
+      .form-field:last-of-type {
+        margin-right: 0;
+        text-align: right;
       }
       #submit {
         margin-right: 0;
-        padding: 0.4rem 1rem;
-        // width: 60%;
       }
     }
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   html {
     font-size: 14px;
+  }
+
+  section {
+    .grid-container {
+      .demo {
+        padding: 3rem;
+      }
+    }
   }
   .banner {
     .banner-content {
@@ -606,6 +647,19 @@ footer {
 
       .banner-clock {
         display: none;
+      }
+    }
+  }
+
+  .contact {
+    form {
+      .form-field {
+        max-width: 100%;
+
+        label {
+        }
+        textarea {
+        }
       }
     }
   }
@@ -625,7 +679,8 @@ footer {
       }
       .demo {
         img {
-          width: 100%;
+          display: none;
+          // width: 100%;
         }
       }
     }

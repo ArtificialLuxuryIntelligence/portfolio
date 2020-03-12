@@ -880,6 +880,7 @@ nav .nav-toggle .hamburger::after {
     padding: 3rem 2rem;
   }
   section .grid-container .demo {
+    padding: 6rem;
     text-align: center;
     border-bottom: 1px solid white;
     align-items: center;
@@ -891,30 +892,41 @@ nav .nav-toggle .hamburger::after {
     border-bottom: none;
   }
 
-  .contact form .form-field {
+  .contact form {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
   }
-  .contact form label {
+  .contact form .form-field {
+    max-width: 70%;
+    width: 100%;
+    display: block;
+  }
+  .contact form .form-field label {
     text-align: left;
+    display: block;
   }
-  .contact form label,
-.contact form input,
-.contact form textarea {
+  .contact form .form-field textarea {
     max-width: 100%;
-  }
-  .contact form textarea {
     width: 100%;
+    display: block;
+  }
+  .contact form .form-field:last-of-type {
+    margin-right: 0;
+    text-align: right;
   }
   .contact form #submit {
     margin-right: 0;
-    padding: 0.4rem 1rem;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   html {
     font-size: 14px;
+  }
+
+  section .grid-container .demo {
+    padding: 3rem;
   }
 
   .banner .banner-content {
@@ -922,6 +934,10 @@ nav .nav-toggle .hamburger::after {
   }
   .banner .banner-content .banner-clock {
     display: none;
+  }
+
+  .contact form .form-field {
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 500px) {
@@ -936,7 +952,7 @@ nav .nav-toggle .hamburger::after {
     padding: 2.5rem 2rem;
   }
   section .grid-container .demo img {
-    width: 100%;
+    display: none;
   }
 }
 

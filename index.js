@@ -49,7 +49,7 @@ const options = {
   rootMargin: convertRemToPixels(-2.5) + "px"
 };
 
-const observer = new IntersectionObserver(function(entries, observer) {
+const observer = new IntersectionObserver(function(entries, options) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
       nav.classList.add("nav-scroll");
@@ -71,7 +71,7 @@ observer.observe(banner);
 
 // observer2 refreshes banner roll-in animation when scroll back to top
 
-const observer2 = new IntersectionObserver(function(entries, observer) {
+const observer2 = new IntersectionObserver(function(entries, options) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       textRolls.forEach(textRoll => textRoll.classList.add("text-roll"));
