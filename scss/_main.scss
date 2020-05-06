@@ -284,7 +284,7 @@ section {
   border-left: 0.5px solid $c4;
   border-right: 0.5px solid $c4;
 
-  // box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.185);
+  // box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
   // border-radius: 6px;
 
   h1 {
@@ -321,7 +321,7 @@ section {
     margin-bottom: 1rem;
     line-height: 125%;
   }
-  a,
+  .button-link,
   #submit {
     display: inline-block;
     padding: 0.3rem;
@@ -350,6 +350,7 @@ section {
       border-top-right-radius: 1.5rem;
       border-bottom-left-radius: 1.5rem;
       border-bottom-right-radius: 4rem;
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
 
       ul {
         margin-block-start: 0;
@@ -365,14 +366,16 @@ section {
     .demo {
       text-align: center;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       flex-direction: column;
 
       img {
-        width: 100%;
-        // min-height: 400px;
-        // margin-bottom: 1.4rem;
-        // border: 1px solid rgb(190, 189, 189);
+        object-fit: contain;
+
+        display: block;
+        margin-bottom: 1rem;
+        max-width: 100%;
+        max-height: 400px;
       }
     }
   }
@@ -390,7 +393,7 @@ section {
 
   form {
     padding: 1rem;
-    max-width: 1000px;
+    max-width: 1400px;
 
     .form-field {
       display: flex;
@@ -415,7 +418,7 @@ section {
 
     input,
     textarea {
-      border: 2px solid rgb(179, 179, 179);
+      border: 1px solid rgb(202, 202, 202);
       border-radius: 2px;
     }
 
@@ -426,6 +429,22 @@ section {
       width: auto;
     }
   }
+}
+.about {
+  a {
+    color: $c6;
+    transition: all 0.1s;
+    border-radius: 3px;
+    padding: 0 0.2em;
+    &:hover {
+      color: $cpop;
+      background-color: $c6;
+    }
+  }
+
+  // .inline-link {
+  //   display: inline;
+  // }
 }
 
 /* ---------- footer */
@@ -444,9 +463,10 @@ footer {
   }
 }
 
-// ---------- MEDIA QUERIES ----------
+// -------------------------------------------------- MEDIA QUERIES --------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1200px) {
   html {
     font-size: 16px;
   }
@@ -511,8 +531,8 @@ footer {
       top: 4rem;
       right: 0;
       margin-right: 0;
-      border-top-left-radius: 4rem;
-      border-bottom-left-radius: 4rem;
+      border-top-left-radius: 1.5rem;
+      border-bottom-left-radius: 1.5rem;
       background-color: $c3;
       transition: 0.4s ease;
       overflow: hidden;
@@ -524,7 +544,7 @@ footer {
           // text-align: center;
           width: 100%;
           display: inline-block;
-          padding: 2.5rem 1rem 2.5rem 2rem;
+          padding: 2rem 1rem 2rem 1rem;
           font-size: 1.6rem;
 
           border-bottom: 1px solid $cpop;
@@ -560,7 +580,6 @@ footer {
         border-bottom: 1px solid $cpop;
         align-items: center;
         img {
-          width: 100%;
         }
       }
 
@@ -681,6 +700,11 @@ footer {
         img {
           display: none;
           // width: 100%;
+        }
+        a {
+          padding: 0.8rem;
+          margin: 0.3rem;
+          width: 80%;
         }
       }
     }

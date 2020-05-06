@@ -684,7 +684,7 @@ section p {
   margin-bottom: 1rem;
   line-height: 125%;
 }
-section a,
+section .button-link,
 section #submit {
   display: inline-block;
   padding: 0.3rem;
@@ -694,7 +694,7 @@ section #submit {
   color: #ff1b0d;
   transition: all 0.1s;
 }
-section a:hover,
+section .button-link:hover,
 section #submit:hover {
   color: white;
   background-color: #ff1b0d;
@@ -712,6 +712,7 @@ section .grid-container .grid-item {
   border-top-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 4rem;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
 }
 section .grid-container .grid-item ul {
   margin-block-start: 0;
@@ -724,11 +725,15 @@ section .grid-container .grid-item ul li {
 section .grid-container .demo {
   text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
 }
 section .grid-container .demo img {
-  width: 100%;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  max-height: 400px;
 }
 section:last-child {
   margin-bottom: 90px;
@@ -740,7 +745,7 @@ section:last-child {
 }
 .contact form {
   padding: 1rem;
-  max-width: 1000px;
+  max-width: 1400px;
 }
 .contact form .form-field {
   display: flex;
@@ -762,7 +767,7 @@ section:last-child {
 }
 .contact form input,
 .contact form textarea {
-  border: 2px solid #b3b3b3;
+  border: 1px solid #cacaca;
   border-radius: 2px;
 }
 .contact form #submit {
@@ -770,6 +775,17 @@ section:last-child {
   margin-left: auto;
   margin-right: 10%;
   width: auto;
+}
+
+.about a {
+  color: #ff1b0d;
+  transition: all 0.1s;
+  border-radius: 3px;
+  padding: 0 0.2em;
+}
+.about a:hover {
+  color: white;
+  background-color: #ff1b0d;
 }
 
 /* ---------- footer */
@@ -786,7 +802,7 @@ footer p {
   text-align: right;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1200px) {
   html {
     font-size: 16px;
   }
@@ -844,8 +860,8 @@ nav .nav-toggle .hamburger::after {
     top: 4rem;
     right: 0;
     margin-right: 0;
-    border-top-left-radius: 4rem;
-    border-bottom-left-radius: 4rem;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
     background-color: #e8790c;
     transition: 0.4s ease;
     overflow: hidden;
@@ -856,7 +872,7 @@ nav .nav-toggle .hamburger::after {
   nav ul li .nav-link {
     width: 100%;
     display: inline-block;
-    padding: 2.5rem 1rem 2.5rem 2rem;
+    padding: 2rem 1rem 2rem 1rem;
     font-size: 1.6rem;
     border-bottom: 1px solid white;
   }
@@ -884,9 +900,6 @@ nav .nav-toggle .hamburger::after {
     text-align: center;
     border-bottom: 1px solid white;
     align-items: center;
-  }
-  section .grid-container .demo img {
-    width: 100%;
   }
   section .grid-container .demo:last-of-type {
     border-bottom: none;
@@ -953,6 +966,11 @@ nav .nav-toggle .hamburger::after {
   }
   section .grid-container .demo img {
     display: none;
+  }
+  section .grid-container .demo a {
+    padding: 0.8rem;
+    margin: 0.3rem;
+    width: 80%;
   }
 }
 

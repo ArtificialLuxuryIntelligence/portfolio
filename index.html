@@ -23,7 +23,6 @@
         >
         <div class="nav-toggle"><div class="hamburger"></div></div>
         <ul class="nav-link-nav nav-closed">
-          <!-- start with projects? -->
           <li><a class="nav-link" href="#projects">projects</a></li>
           <li><a class="nav-link" href="#about">about</a></li>
           <li><a class="nav-link" href="#contact">contact</a></li>
@@ -40,7 +39,7 @@
             Full-stack developer
           </h2>
           <a id="banner-intro3" class="text-roll" href="#projects">
-            <i class="fa fa-chevron-down fa-2x "></i>
+            <i class="fa fa-chevron-down fa-2x"></i>
           </a>
         </div>
 
@@ -182,7 +181,7 @@
         <h1>projects</h1>
         <div class="grid-container">
           <div class="grid-item">
-            <h2>Squiggle Game</h2>
+            <h2>Squiggler</h2>
             <h3>Description</h3>
             <p>
               A drawing game where visitors can complete drawing a doodle based
@@ -190,29 +189,31 @@
             </p>
             <p>A separate gallery section shows some of the creations.</p>
             <p>
-              The game currently works as a stand alone item but will be
-              incorporated into a larger mixed-media group art project.
+              Users can log in, create private games and invite friends to play.
             </p>
             <h3>Technical</h3>
 
             <ul>
-              <li>HTML / CSS / JS</li>
               <li>Express with Handlebars templating</li>
               <li>MongoDB Atlas</li>
+              <li>Passport.js authentication</li>
             </ul>
             <ul>
+              <li>Fully responsive design</li>
               <li>Canvas API with custom drawing (with smoothing)</li>
-              <li>Fully responsive desgin</li>
               <li>Infinite scroll gallery</li>
             </ul>
             <p></p>
           </div>
           <div class="grid-item demo">
-            <!-- <h3>Demo</h3> -->
-            <img src="#" alt="" />
-
-            <a href="#">Live Demo <i class="fas fa-external-link-alt"></i> </a>
-            <a href="#">Code <i class="fab fa-github"></i> </a>
+            <img src="assets/squiggler.gif" />
+            <span>
+              <a class="button-link" href="#"
+                >Live Demo <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a class="button-link" href="#"
+                >Code <i class="fab fa-github"></i> </a
+            ></span>
           </div>
 
           <!-- <div class="spacer"></div> -->
@@ -240,22 +241,20 @@
               <li>Fully responsive desgin</li>
               <li>Page loaders</li>
               <li>Page transition effect</li>
-              <li>Lightbox with lazy loaded images</li>
+              <li>Modal lightbox</li>
               <li>Slideshow</li>
             </ul>
 
             <p></p>
           </div>
           <div class="grid-item demo">
-            <!-- <h3>Demo</h3> -->
-            <!-- <img src="#" alt="" /> -->
             <img src="assets/lgaptest.gif" />
-            <!-- <img src="" /> -->
             <span>
-              <a href="#"
+              <a class="button-link" href="#"
                 >Live Demo <i class="fas fa-external-link-alt"></i>
               </a>
-              <a href="#">Code <i class="fab fa-github"></i> </a
+              <a class="button-link" href="#"
+                >Code <i class="fab fa-github"></i> </a
             ></span>
           </div>
           <div class="grid-item">
@@ -263,21 +262,30 @@
             <h3>Description</h3>
             <p>
               A web application designed to help language users learn new
-              vocabulary based on their current level in various languages
-              (currently English, French and Spanish).
+              vocabulary based on their current level of their target language.
+              Currently available in English, French and Spanish.
             </p>
             <p>
               Users can submit text and will be given a list of words from the
-              text that they may not know accompanied by their definitions
+              text that they may not know accompanied by their definitions.
             </p>
-            <p>Users can save the words for later reference</p>
+            <p>Users can save the words for later reference.</p>
+            <p>
+              New words (approximately of the users language level) are
+              suggested.
+            </p>
 
             <h3>Technical</h3>
             <ul>
-              <li>MERN stack application</li>
-              <li>bcryptjs</li>
+              <li>MERN stack</li>
               <li>MongoDB Atlas</li>
-              <li>Unofficial Google dictionary API</li>
+              <li>JSON Web Tokens</li>
+              <li>bcryptjs</li>
+            </ul>
+            <ul>
+              <li>Fully responsive desgin</li>
+
+              <li>Uses dictionary API (Unofficial Google)</li>
               <li>
                 Server-side algorithm determines what vocabulary to send to user
                 based on input text, user data and word frequency lists.
@@ -285,10 +293,14 @@
             </ul>
           </div>
           <div class="grid-item demo">
-            <!-- <h3>Demo</h3> -->
-            <img src="#" alt="" />
-            <a href="#">Live Demo <i class="fas fa-external-link-alt"></i> </a>
-            <a href="#">Code <i class="fab fa-github"></i> </a>
+            <img src="assets/vocabify.gif" />
+            <span>
+              <a class="button-link" href="#"
+                >Live Demo <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a class="button-link" href="#"
+                >Code <i class="fab fa-github"></i> </a
+            ></span>
           </div>
         </div>
       </section>
@@ -301,77 +313,27 @@
           <div class="grid-item">
             <h2>Me</h2>
             <p>
-              Over the past several months, I have been intensively teaching
-              myself all things web-development. I have relied on the wealth of
-              information available on the internet as well as my determination,
-              creativity and analytical background in Maths, Physics (BSc) and
-              Philosophy (MA) to improve daily.
+              Over the past months, I have been intensively teaching myself all
+              things web-development. I have relied on the wealth of information
+              available on the internet as well as my determination, creativity
+              and analytical background in Maths, Physics (BSc) and Philosophy
+              (MA) to improve daily.
             </p>
 
             <p>
               I am interested in all sorts and always happy to learn new things.
-              You never know what interesting thing is just around the next
-              corner.
             </p>
             <p>
               I am looking for a position in a team where I can learn, grow and
               add value in an enthusiastic, supportive environment.
             </p>
             <p>
-              Please see a selection of my projects above for examples of my
-              work.
+              Please see a selection of my
+              <a href="#projects">projects</a> above for examples of my work.
             </p>
           </div>
           <div class="grid-item">
-            <h2>What I have used</h2>
-            <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i>
-            <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
-            <i>HTML5</i>
-            <i>Javascript</i> <i>Sass</i>
+            <h2>What I know</h2>
           </div>
         </div>
       </section>
@@ -393,7 +355,7 @@
               type="text"
               name="name"
               id="name"
-              placeholder="Your Name"
+              placeholder="Johnny Bloggs"
               required
             />
           </div>
@@ -403,7 +365,7 @@
               type="email"
               name="email-input"
               id="email-input"
-              placeholder="example@domain.com"
+              placeholder="dog@poodle.com"
               required
             />
           </div>
@@ -414,7 +376,12 @@
           </div>
 
           <div class="form-field">
-            <input id="submit" type="submit" value="Submit" />
+            <input
+              id="submit"
+              class="button-link"
+              type="submit"
+              value="Submit"
+            />
           </div>
         </form>
       </section>
