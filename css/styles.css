@@ -655,7 +655,8 @@ section {
   border-right: 0.5px solid #ff5900;
 }
 section h1 {
-  font-size: 6rem;
+  font-size: 5rem;
+  letter-spacing: -0.4rem;
   margin: 0 0 3rem 0rem;
   text-shadow: 1px 4px 3px rgba(133, 133, 133, 0.301);
   padding-bottom: 2rem;
@@ -683,6 +684,9 @@ section p {
   font-size: 1rem;
   margin-bottom: 1rem;
   line-height: 125%;
+}
+section .note {
+  font-size: 0.7rem;
 }
 section .button-link,
 section #submit {

@@ -288,7 +288,9 @@ section {
   // border-radius: 6px;
 
   h1 {
-    font-size: 6rem;
+    font-size: 5rem;
+    letter-spacing: -0.4rem;
+
     // margin-left: 1rem;
     margin: 0 0 3rem 0rem;
     // margin-top: 1rem;
@@ -320,6 +322,9 @@ section {
     font-size: 1rem;
     margin-bottom: 1rem;
     line-height: 125%;
+  }
+  .note {
+    font-size: 0.8rem;
   }
   .button-link,
   #submit {

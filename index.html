@@ -43,7 +43,20 @@
           </a>
         </div>
 
-        <!-- SVG clock -- CREDIT: most code from https://codepen.io/gene7299/pen/eJeoPq -->
+        <!-- SVG clock -- CREDIT: slightly modified version of linked code below  -->
+        <!--
+
+ Copyright (c) 2020 by Gene (https://codepen.io/gene7299/pen/eJeoPq)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+-->
         <div class="banner-clock">
           <svg
             id="clock"
@@ -181,6 +194,101 @@
         <h1>projects</h1>
         <div class="grid-container">
           <div class="grid-item">
+            <h2>Vocabify</h2>
+            <h3>Description</h3>
+            <p>
+              A web application designed to help language users learn new
+              vocabulary based on the current level of their target language.
+              Currently available in English, French and Spanish.
+            </p>
+            <p>
+              Users can submit text and will be returned a list of words with
+              their definitions from the text that they, most likely, do not
+              know.
+            </p>
+            <p>
+              New vocabulary is proposed to the user base on their language
+              level.
+            </p>
+
+            <h3>Technical</h3>
+            <ul>
+              <li>MERN stack</li>
+              <li>MongoDB Atlas</li>
+              <li>JSON Web Tokens</li>
+              <li>bcryptjs</li>
+            </ul>
+            <ul>
+              <li>Fully responsive design</li>
+
+              <li>
+                Server-side code determines what vocabulary to send to user
+                based on input text, user data and word frequency lists.
+              </li>
+              <li>Backend uses (Unofficial) Google dictionary API</li>
+            </ul>
+          </div>
+          <div class="grid-item demo">
+            <img src="assets/vocabify.gif" />
+            <span>
+              <a
+                class="button-link"
+                href="https://vocabify.herokuapp.com/"
+                target="_blank"
+                >Live Demo <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a
+                class="button-link"
+                href="https://github.com/ArtificialLuxuryIntelligence/VocabifyMERN"
+                target="_blank"
+                >Code <i class="fab fa-github"></i> </a
+            ></span>
+          </div>
+          <div class="grid-item">
+            <h2>LGA Photography Portfolio Site</h2>
+            <h3>Description</h3>
+            <p>
+              A photography portfolio website. A multipage showcase of the
+              photographers work.
+            </p>
+            <p>
+              The design is minimalist and allows the focus of the pages to be
+              the photographs themselves while still allowing for some subtle
+              styling.
+            </p>
+
+            <h3>Technical</h3>
+            <ul>
+              <li>HTML / SCSS / JS</li>
+              <li>Webpack bundling</li>
+            </ul>
+            <ul>
+              <li>Fully responsive design</li>
+              <li>Page loaders</li>
+              <li>Page transition effect</li>
+              <li>Modal lightbox</li>
+              <li>Slideshow</li>
+            </ul>
+
+            <p></p>
+          </div>
+          <div class="grid-item demo">
+            <img src="assets/lgap.gif" />
+            <span>
+              <a
+                class="button-link"
+                href="https://lgap.netlify.com/"
+                target="_blank"
+                >Live Demo <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a
+                class="button-link"
+                href="https://github.com/ArtificialLuxuryIntelligence/LGAP"
+                target="_blank"
+                >Code <i class="fab fa-github"></i> </a
+            ></span>
+          </div>
+          <div class="grid-item">
             <h2>Squiggler</h2>
             <h3>Description</h3>
             <p>
@@ -208,97 +316,57 @@
           <div class="grid-item demo">
             <img src="assets/squiggler.gif" />
             <span>
-              <a class="button-link" href="#"
+              <a
+                class="button-link"
+                href="https://squiggle-game.herokuapp.com/"
+                target="_blank"
                 >Live Demo <i class="fas fa-external-link-alt"></i>
               </a>
-              <a class="button-link" href="#"
+              <a
+                class="button-link"
+                href="https://github.com/ArtificialLuxuryIntelligence/squiggle-game"
+                target="_blank"
                 >Code <i class="fab fa-github"></i> </a
             ></span>
           </div>
-
-          <!-- <div class="spacer"></div> -->
-
           <div class="grid-item">
-            <h2>LGA Photography Portfolio Site</h2>
+            <h2>Frikkin' Aliens</h2>
             <h3>Description</h3>
-            <p>
-              A photography portfolio website. A multipage showcase of the
-              photographers work.
-            </p>
-            <p>
-              The design is minimalist and allows the focus of the pages to be
-              the photographs themselves while still allowing for some subtle
-              styling.
-            </p>
-            <!-- <p>Custom built with some design input from the client</p> -->
 
+            <p>
+              A top-down 2D shooter game in which the player shoots aliens and
+              clears levels.
+            </p>
+            <p>
+              Features simple powerups for upgrading weapons and restoring
+              health
+            </p>
+
+            <p class="note">
+              note: game/level design in progress but all technical elements
+              (enemy/weapon/powerup creation, collisions etc. fully functional)
+            </p>
             <h3>Technical</h3>
+
             <ul>
-              <li>HTML / SCSS / JS</li>
-              <li>Webpack bundling</li>
-            </ul>
-            <ul>
-              <li>Fully responsive desgin</li>
-              <li>Page loaders</li>
-              <li>Page transition effect</li>
-              <li>Modal lightbox</li>
-              <li>Slideshow</li>
+              <li>HTML/CSS/JS</li>
             </ul>
 
             <p></p>
           </div>
           <div class="grid-item demo">
-            <img src="assets/lgaptest.gif" />
+            <img src="assets/faliens.gif" />
             <span>
-              <a class="button-link" href="#"
+              <a
+                class="button-link"
+                href="https://frickinaliens.netlify.app/"
+                target="_blank"
                 >Live Demo <i class="fas fa-external-link-alt"></i>
               </a>
-              <a class="button-link" href="#"
-                >Code <i class="fab fa-github"></i> </a
-            ></span>
-          </div>
-          <div class="grid-item">
-            <h2>Vocabify</h2>
-            <h3>Description</h3>
-            <p>
-              A web application designed to help language users learn new
-              vocabulary based on their current level of their target language.
-              Currently available in English, French and Spanish.
-            </p>
-            <p>
-              Users can submit text and will be given a list of words from the
-              text that they may not know accompanied by their definitions.
-            </p>
-            <p>Users can save the words for later reference.</p>
-            <p>
-              New words (approximately of the users language level) are
-              suggested.
-            </p>
-
-            <h3>Technical</h3>
-            <ul>
-              <li>MERN stack</li>
-              <li>MongoDB Atlas</li>
-              <li>JSON Web Tokens</li>
-              <li>bcryptjs</li>
-            </ul>
-            <ul>
-              <li>Fully responsive desgin</li>
-
-              <li>Uses dictionary API (Unofficial Google)</li>
-              <li>
-                Server-side algorithm determines what vocabulary to send to user
-                based on input text, user data and word frequency lists.
-              </li>
-            </ul>
-          </div>
-          <div class="grid-item demo">
-            <img src="assets/vocabify.gif" />
-            <span>
-              <a class="button-link" href="#"
-                >Live Demo <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a class="button-link" href="#"
+              <a
+                class="button-link"
+                href="https://github.com/ArtificialLuxuryIntelligence/pewpewpew"
+                target="_blank"
                 >Code <i class="fab fa-github"></i> </a
             ></span>
           </div>
@@ -325,7 +393,7 @@
             </p>
             <p>
               I am looking for a position in a team where I can learn, grow and
-              add value in an enthusiastic, supportive environment.
+              add value in an enthusiastic and supportive environment.
             </p>
             <p>
               Please see a selection of my
@@ -334,6 +402,24 @@
           </div>
           <div class="grid-item">
             <h2>What I know</h2>
+
+            <p>
+              The best place to get an idea of what I can do is by looking at my
+              projects.
+            </p>
+            <p>Some things I have learned and used:</p>
+            <ul>
+              <li>HTML5 (semantic)</li>
+              <li>(S)CSS3 (flex, grid, responsive design)</li>
+              <li>
+                React (currently up to React 16.7 )
+              </li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>MongoDB</li>
+              <li>Webpack</li>
+              <li>Git /Github</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -355,7 +441,7 @@
               type="text"
               name="name"
               id="name"
-              placeholder="Johnny Bloggs"
+              placeholder="Your Name"
               required
             />
           </div>
@@ -365,7 +451,7 @@
               type="email"
               name="email-input"
               id="email-input"
-              placeholder="dog@poodle.com"
+              placeholder="verycoolname@domain.com"
               required
             />
           </div>
