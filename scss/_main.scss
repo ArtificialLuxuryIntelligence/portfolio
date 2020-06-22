@@ -28,10 +28,8 @@ nav {
   transition-duration: 0.2s;
 
   .nav-link {
-    // padding: 0.5rem;
     text-decoration: none;
     color: $cpop;
-    // height: 100%;
   }
   .nav-link-scroll {
   }
@@ -61,11 +59,9 @@ nav {
     align-items: center;
     height: 100%;
     list-style-type: none;
-    // text-decoration: none;
-    // margin-right: 1rem;
+
     li {
       display: flex;
-      // margin-left: 2.5rem;
       height: 100%;
       a {
         display: flex;
@@ -88,9 +84,7 @@ nav {
   opacity: 1;
   visibility: visible;
   background-color: $c4;
-  // border-bottom: 2px solid $c3;
   transition-duration: 0.4s;
-  //   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* ---------- banner ---------- */
@@ -102,8 +96,7 @@ nav {
   height: 100%;
   width: 100%;
 
-  background-image: url("../assets/sunrise-clouds2.jpg");
-  background-image: url("../assets/IMG_20190209_180214_301.jpg");
+  background-image: url("../assets/sea_background.jpg");
 
   background-size: cover;
 
