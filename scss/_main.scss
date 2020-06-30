@@ -447,17 +447,19 @@ section {
 
 /* ---------- footer */
 footer {
+  display: flex;
+  justify-content: space-between;
   padding: 1rem;
   color: $cpop;
   background-color: $c4;
   margin-bottom: 0;
   bottom: 0;
   width: 100%;
-
-  p {
-    padding: 0.1rem;
-    // float: right;
-    text-align: right;
+  a {
+    color: $cpop;
+    i {
+      color: inherit;
+    }
   }
 }
 
